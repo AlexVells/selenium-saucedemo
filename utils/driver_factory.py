@@ -1,5 +1,4 @@
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 import logging
 
@@ -10,7 +9,7 @@ class DriverFactory:
     @staticmethod
     def get_driver():
         logger.info("Initializing ChromeDriver...")
-        service = Service(ChromeDriverManager().install())
+        service = Service("C:\\Program Files\\ChromeDriver\\chromedriver.exe")
         logger.info(f"ChromeDriver path: {service.path}")
         driver = webdriver.Chrome(service=service)
         driver.maximize_window()
