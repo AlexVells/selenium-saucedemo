@@ -82,4 +82,4 @@ def test_login(login_page, username, password, expected_message):
             assert expected_message in error_message, f"Unexpected error message: {error_message}"
             logger.info(f"Test successful: Error message displayed — '{error_message}'")
 
-            
+    
